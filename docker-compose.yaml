@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  gnb:
+    network_mode: "host"
+    image: shashidharpatil/ueransim:gnb
+    volumes:
+      - ./config:/usr/src/UERANSIM/config
+    environment:
+      - CONFIG=open5gs-gnb.yaml
+
+  ue:
+    network_mode: "host"
+    image: shashidharpatil/ueransim:ue
+    volumes:
+      - ./config:/usr/src/UERANSIM/config
+    environment:
+      - CONFIG=open5gs-ue.yaml
