@@ -7,7 +7,7 @@ services:
     volumes:
       - ./config:/usr/src/UERANSIM/config
     environment:
-      - CONFIG=open5gs-gnb.yaml
+      - CONFIG=magma5gc-gnb.yaml
 
   ue:
     network_mode: "host"
@@ -15,4 +15,4 @@ services:
     volumes:
       - ./config:/usr/src/UERANSIM/config
     environment:
-      - CONFIG=open5gs-ue.yaml
+      - CONFIG=magma5gc-ue.yaml
